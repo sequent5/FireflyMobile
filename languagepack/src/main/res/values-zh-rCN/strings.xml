@@ -67,8 +67,8 @@
     <string name="target_amount">目标金额</string>
     <string name="currency_created">"%1$s 货币已建立 "</string>
     <string name="left_to_spend">剩余可花费</string>
-    <string name="net_worth">净值</string>
-    <string name="balance">余额</string>
+    <string name="net_worth">净支出</string>
+    <string name="balance">账户结余</string>
     <string name="currency_updated">"%1$s 货币已更新 "</string>
     <string name="edit">编辑</string>
     <string name="delete_tag_title">删除标签 %1$s</string>
