@@ -370,7 +370,7 @@
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/netEarningsCard"
             android:layout_width="match_parent"
-            android:layout_height="360dp"
+            android:layout_height="352dp"
             android:stateListAnimator="@animator/lift_on_touch"
             card_view:targetApi="lollipop"
             android:clickable="true"
@@ -408,7 +408,7 @@
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/netEarningsExtraInfoLayout"
                     android:layout_width="match_parent"
-                    android:layout_height="110dp"
+                    android:layout_height="120dp"
                     android:layout_marginTop="8dp"
                     android:background="#E1E1E1"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -550,7 +550,7 @@
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/dailySummaryCard"
             android:layout_width="match_parent"
-            android:layout_height="360dp"
+            android:layout_height="352dp"
             android:stateListAnimator="@animator/lift_on_touch"
             card_view:targetApi="lollipop"
             android:clickable="true"
@@ -590,7 +590,7 @@
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/dailySummaryExtraInfoLayout"
                     android:layout_width="match_parent"
-                    android:layout_height="52dp"
+                    android:layout_height="60dp"
                     android:layout_marginTop="8dp"
                     android:background="#E1E1E1"
                     app:layout_constraintBottom_toBottomOf="parent"
