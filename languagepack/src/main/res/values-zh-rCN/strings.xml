@@ -69,7 +69,7 @@
     <string name="currency_created">"%1$s 货币已建立 "</string>
     <string name="left_to_spend">剩余可花费</string>
     <string name="net_worth">账户结余</string>
-    <string name="balance">净支出</string>
+    <string name="balance">收支差额</string>
     <string name="currency_updated">"%1$s 货币已更新 "</string>
     <string name="edit">编辑</string>
     <string name="delete_tag_title">删除标签 %1$s</string>
@@ -137,7 +137,7 @@
     <string name="view_on_github">在Github上查看</string>
     <string name="author">软件开发者</string>
     <string name="required_field">必要项</string>
-    <string name="net_earnings">净支出</string>
+    <string name="net_earnings">差额</string>
     <string name="thirty_day_average">平均三十天</string>
     <string name="six_day_average">平均六天</string>
     <string name="done">完成</string>
