@@ -21,34 +21,10 @@ jobs:
       - name: Grant rights
         run: chmod +x gradlew
         
-      - name: Release Information
-        run: |
-          versionName=`grep "versionName\s" app/build.gradle | awk '{ print $2 }'  | tr -d \''"\'` 
-          echo "VERSION_NAME=v$versionName" >> $GITHUB_ENV  
-        
-      - name: Build Bundle
-        run: ./gradlew bundleRelease
-             
-      - name: Sign Release Bundle
-        id: sign_google_play
-        uses: r0adkll/sign-android-release@v1
-        with:
-          releaseDirectory: app/build/outputs/bundle/release
-          signingKeyBase64: ${{ secrets.GOOGLE_PLAY_UPLOAD_KEY }}
-          alias: ${{ secrets.GOOGLE_PLAY_ALIAS }}
-          keyStorePassword: ${{ secrets.GOOGLE_PLAY_STORE_PASSWORD }}
-          keyPassword: ${{ secrets.GOOGLE_PLAY_STORE_PASSWORD }}
-      
-      - name: Create service_account.json FROM secrets.SERVICE_ACCOUNT_JSON
-        run: echo '${{ secrets.SERVICE_ACCOUNT_JSON }}' > service_account.json
-    
-      - name: Release on Google Play
-        uses: r0adkll/upload-google-play@v1
-        with:
-          serviceAccountJson: service_account.json
-          packageName: xyz.hisname.fireflyiii
-          releaseFiles: ${{steps.sign_google_play.outputs.signedReleaseFile}}
-          track: beta
-          inAppUpdatePriority: 5
-          userFraction: 0.9
-          whatsNewDirectory: whatsnew
+      - name: Generate APK
+      run: ./gradlew build
+    - name: Upload APK
+      uses: actions/upload-artifact@v2
+      with:
+        name: app
+        path: app/build/outputs/apk/debug/app-debug.apk
